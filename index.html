@@ -6,10 +6,10 @@
 <head>
   <meta charset="utf-8" />
   <title>
-    Influint | Your Vision, Our Mission
+    Florian Merzenich | Klarheit, Strategie, Struktur
   </title>
   <meta
-    content="Influint helps creators build scalable businesses through strategic guidance, operational support, and diversified monetization."
+    content="Lerne, wie du Dein Geld strategisch investierst – mit Klarheit, Strategie und Struktur. Unabhängig von Banken, Trends & Hypes."
     name="description" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <meta content="Webflow" name="generator" />
@@ -71,6 +71,7 @@
       opacity: 0;
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -287,6 +288,235 @@ a,
         html.wf-design-mode .clients_slide.is-others {
           position: static;
         }
+
+        /* Bekannt aus Marquee CSS */
+        .marquee-container {
+          width: 100%;
+          overflow: hidden;
+          padding: 4rem 0;
+          /* Erhöhtes Padding für mehr Höhe */
+          margin: 2rem 0;
+          /* Abstand nach oben/unten */
+          position: relative;
+          background: rgba(255, 255, 255, 0.02);
+          /* Leichter Hintergrund zur Abgrenzung */
+          mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+          -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .marquee-content {
+          display: flex;
+          align-items: center;
+          width: max-content;
+          animation: scrolling 30s linear infinite;
+        }
+
+        .marquee-logo {
+          height: 30px;
+          width: auto;
+          margin: 0 30px;
+          object-fit: contain;
+          opacity: 0.7;
+          filter: grayscale(100%);
+          transition: all 0.3s ease;
+        }
+
+        .marquee-logo:hover {
+          opacity: 1;
+          filter: grayscale(0%);
+        }
+
+        .marquee-logo.invert {
+          filter: invert(1) grayscale(100%);
+        }
+
+        .marquee-logo.invert:hover {
+          filter: invert(1) grayscale(0%);
+        }
+
+        .marquee-text {
+          font-size: 18px;
+          font-weight: 500;
+          margin: 0 30px;
+          white-space: nowrap;
+          color: white;
+          opacity: 0.8;
+        }
+
+        @keyframes scrolling {
+          0% {
+            transform: translateX(0);
+          }
+
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        :root {
+          --text-gray: #888;
+        }
+
+        /* Team Slider CSS */
+        .team-section {
+          padding: 4rem 2rem;
+          text-align: center;
+          color: #fff;
+          position: relative;
+        }
+
+        .section-title {
+          font-size: 2.5rem;
+          margin-bottom: 2rem;
+          font-weight: 300;
+        }
+
+        .slider-wrapper {
+          position: relative;
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+        }
+
+        .team-slider-container {
+          overflow: hidden;
+          width: 100%;
+          margin: 0 40px;
+        }
+
+        .team-slider-track {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+          gap: 20px;
+        }
+
+        .team-card {
+          width: 280px;
+          /* Fest Breite */
+          min-width: 280px;
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
+          padding: 20px;
+          text-align: left;
+          flex-shrink: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          /* Zentriert Bild und Name */
+        }
+
+        .team-img {
+          width: 100%;
+          height: 220px;
+          /* Mehr Höhe für Portraits */
+          object-fit: cover;
+          object-position: top center;
+          /* Fokus auf Gesichter */
+          border-radius: 8px;
+          margin-bottom: 15px;
+          filter: grayscale(20%);
+        }
+
+        .team-name {
+          font-size: 1.5rem;
+          margin: 0;
+          font-weight: 600;
+          align-self: flex-start;
+          /* Name linksbündig */
+        }
+
+        .team-role {
+          font-size: 0.9rem;
+          color: #7BDBD4;
+          /* Akzentfarbe aus der Seite */
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 15px;
+          align-self: flex-start;
+          display: block;
+        }
+
+        .team-desc {
+          font-size: 1rem;
+          line-height: 1.5;
+          color: #ccc;
+          align-self: flex-start;
+        }
+
+        .desc-spacer {
+          display: block;
+          margin-top: 10px;
+          font-weight: 500;
+          color: #fff;
+        }
+
+        .nav-btn {
+          background: none;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          color: #fff;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: all 0.3s;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .nav-btn:hover {
+          background: rgba(255, 255, 255, 0.2);
+          border-color: #fff;
+        }
+
+        /* ProvenExpert Banner */
+        .proven-wrapper {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background: white;
+          padding: 10px 15px;
+          /* Reduziertes Padding */
+          border-radius: 8px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          z-index: 9999;
+          font-family: 'Inter', sans-serif;
+          color: #333;
+          /* min-width entfernt für schmaleren Look */
+        }
+
+        .proven-logo {
+          font-weight: 700;
+          font-size: 18px;
+          margin-bottom: 5px;
+          color: #000;
+        }
+
+        .proven-logo span {
+          color: #FFA500;
+        }
+
+        .proven-stars {
+          color: #FFA500;
+          margin-bottom: 5px;
+          font-size: 18px;
+        }
+
+        .proven-rating {
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 2px;
+        }
+
+        .proven-date {
+          font-size: 11px;
+          color: #888;
+        }
       </style>
     </div>
     <div class="nav_fixed">
@@ -294,9 +524,8 @@ a,
         role="banner" class="nav_component w-nav">
         <div class="padding-global">
           <div class="nav_container">
-            <a href="/" aria-current="page" class="nav_brand w-nav-brand w--current"> <img
-                src="https://cdn.prod.website-files.com/67bf3cf43a707934567c8737/67bf3cf43a707934567c878d_Influint%20(1)%201.svg"
-                loading="lazy" alt="logo" class="nav_logo" />
+            <a href="/" aria-current="page" class="nav_brand w-nav-brand w--current"> <img src="logo_weiß.png"
+                loading="lazy" alt="logo" class="nav_logo" style="height: 85px; width: auto; object-fit: contain;" />
             </a>
             <a href="#section-clients" class="nav_menu_link w-inline-block"> <img
                 src="https://cdn.prod.website-files.com/67bf3cf43a707934567c8737/67bf3cf43a707934567c878c_Influint%20(1)%202.svg"
@@ -323,18 +552,18 @@ a,
           <div class="container-large">
             <div class="hero-content">
               <h1 hero-heading="" class="heading-style-h1">
-                Your Vision.
+                Für Unternehmer &
               </h1>
               <div class="header-content">
                 <div class="header-text-conternt">
                   <div hero-sub="" class="text-size-large text-weight-light">
-                    Full-service management and business growth solutions for creators. Your future starts here.
+                    Lerne, wie du Dein Geld strategisch investierst<br>mit Klarheit, Strategie und Struktur.
                   </div>
                   <div class="max-width-large">
                   </div>
                 </div>
                 <h1 hero-heading="" class="heading-style-h1 is-2">
-                  Our Mission.
+                  Investoren.
                 </h1>
               </div>
               <div class="creators_cotent">
@@ -356,14 +585,14 @@ a,
                 </div>
                 <div class="overflow-hidden">
                   <div hero-trust="" class="text-size-regular-white">
-                    150+ creators trust influint
+                    Über 5000 Menschen vertrauen auf meine Expertise
                   </div>
                 </div>
                 <div hero-cta="" class="btn-gradient">
                   <div class="button_wrap">
                     <a href="https://influint.link/InfluintApplication" class="header-btn w-inline-block">
                       <div>
-                        Apply Now
+                        Jetzt bewerben
                       </div>
                     </a>
                     <div class="button_bg">
@@ -445,7 +674,7 @@ a,
             </div>
             <div class="clearpath-content">
               <div fd-text="scale-in" class="text-size-xlarge text-weight-light">
-                Influint empowers talent to navigate, innovate, and lead in the creator economy.
+                Du verdienst gut – aber dein Geld bleibt passiv? Ohne Strategie wächst dein Vermögen nicht.
               </div>
             </div>
             <div class="cards-wrapper">
@@ -457,13 +686,13 @@ a,
                         <div class="cards_border">
                           <div class="cards_tag">
                             <div>
-                              Brand Partnerships
+                              11+ Jahre
                             </div>
                           </div>
                         </div>
                         <div class="cards_h">
-                          We craft strategic partnerships that boost both earnings and engagement, leveraging thousands
-                          of datapoints and a vast network to maximize both impact and earnings.
+                          Erfahrung im Krypto-Investment. Wir setzen auf bewährte Strategien statt auf kurzfristige
+                          Hypes.
                         </div>
                         <div class="cards_p-wrap">
                           <div class="cards_p">
@@ -478,19 +707,17 @@ a,
                         <div class="cards_border">
                           <div class="cards_tag">
                             <div>
-                              New Revenue
+                              5000+
                             </div>
                           </div>
                         </div>
                         <div class="cards_h">
-                          We help you to review your entire business structure, identifying the most meaningful
-                          opportunities to increase your revenue, decrease your workload, and maximize your
-                          profitability.
+                          Menschen begleitet – seit 2013. Gemeinsam entwickeln wir einen Plan, der zu deiner
+                          Lebensrealität passt.
                         </div>
                         <div class="cards_p-wrap">
                           <div class="cards_p">
-                            We’re here to simplify the complexity, guiding you with strategic insights and hands-on
-                            support to help your business thrive.
+                            Investieren mit System und Verstand.
                           </div>
                         </div>
                       </div>
@@ -500,13 +727,13 @@ a,
                         <div class="cards_border">
                           <div class="cards_tag">
                             <div>
-                              Influint Ventures
+                              53%
                             </div>
                           </div>
                         </div>
                         <div class="cards_h">
-                          Creators are driving the future of commerce. We partner with select clients, offering both
-                          capital and expertise to launch and scale their creator-led ventures.
+                          Ø Jahresrendite (2018–2024)*. Ergebnisse, die für sich sprechen – transparent und
+                          nachweislich.
                         </div>
                         <div class="cards_p-wrap">
                           <div class="cards_p">
@@ -529,17 +756,16 @@ a,
             <div class="partners_wrap">
               <div class="partners-content">
                 <div fd-text="scale-in" class="text-size-xlarge partners-text">
-                  Transform your passion into profit
+                  Kapital auf dem Konto. Klarheit? Fehlanzeige.
                 </div>
                 <div class="max-width-medium">
                   <div fd-text="wipe" class="text-size-medium text-weight-light">
-                    Like so many of our creator partners, unlock the potential of your creativity with our tailored
-                    support and strategic approach.
+                    Jeder Monat kostet dich Rendite, Klarheit und Kontrolle. Hol dir die Strategie zurück.
                   </div>
                 </div>
                 <a href="https://influint.link/InfluintApplication" class="partners-btn w-inline-block">
                   <div>
-                    Apply Now
+                    Erstgespräch
                   </div>
                 </a>
                 <div class="partners-image-list">
@@ -572,6 +798,36 @@ a,
           </div>
         </div>
       </section>
+      <section class="section_media">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="marquee-container">
+              <p
+                style="font-size: 12px; color: var(--text-gray, #888); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; font-weight: 600; text-align: center;">
+                Bekannt aus:</p>
+              <div class="marquee-content">
+                <!-- .webp ersetzt & lazy -->
+                <img src="focus.webp" class="marquee-logo" alt="Focus" loading="lazy" decoding="async">
+                <img src="wirtschaftswoche.webp" class="marquee-logo invert" alt="WirtschaftsWoche" loading="lazy"
+                  decoding="async">
+                <img src="ntv.webp" class="marquee-logo" style="border-radius: 4px;" alt="n-tv" loading="lazy"
+                  decoding="async">
+                <img src="rtl.webp" class="marquee-logo" alt="RTL" loading="lazy" decoding="async">
+                <img src="london.webp" class="marquee-logo" alt="London Daily News" loading="lazy" decoding="async">
+                <span class="marquee-text">Business Magazin</span>
+                <img src="focus.webp" class="marquee-logo" alt="Focus" loading="lazy" decoding="async">
+                <img src="wirtschaftswoche.webp" class="marquee-logo invert" alt="WirtschaftsWoche" loading="lazy"
+                  decoding="async">
+                <img src="ntv.webp" class="marquee-logo" style="border-radius: 4px;" alt="n-tv" loading="lazy"
+                  decoding="async">
+                <img src="rtl.webp" class="marquee-logo" alt="RTL" loading="lazy" decoding="async">
+                <img src="london.webp" class="marquee-logo" alt="London Daily News" loading="lazy" decoding="async">
+                <span class="marquee-text">Business Magazin</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="section-process" class="section_process">
         <div class="padding-global">
           <div class="container-large">
@@ -580,11 +836,11 @@ a,
               </div>
               <h2 class="process_heading">
                 <div fd-text="h2" class="heading-style-h3">
-                  our
+                  Der
                 </div>
                 <div class="process_h-offset">
                   <div fd-text="h2" class="heading-style-h3">
-                    PROCESS
+                    PROZESS
                   </div>
                 </div>
               </h2>
@@ -592,14 +848,13 @@ a,
                 <div class="process_headings">
                   <div class="process_items is-1">
                     <div class="process_h">
-                      Introductory Call
+                      Struktur statt Unsicherheit
                     </div>
                     <div class="process_bullets">
                     </div>
                     <p fd-text="wipe" class="process_paragraph-tab">
-                      We start with a conversation to understand your goals, challenges, and vision for growth. Based on
-                      your specific needs, we outline how our team can help drive the business growth you&#39;re looking
-                      for.
+                      Es geht nicht darum, was „man gerade macht“, sondern zu verstehen, wie Geldsysteme funktionieren.
+                      Für Menschen, die mitdenken und vorbauen wollen.
                     </p>
                     <div class="process_bg">
                     </div>
@@ -608,14 +863,13 @@ a,
                   </div>
                   <div class="process_items is-2">
                     <div class="process_h">
-                      Onboarding
+                      Investieren mit System
                     </div>
                     <div class="process_bullets">
                     </div>
                     <p fd-text="wipe" class="process_paragraph-tab">
-                      You&#39;ll meet your dedicated team and learn about the resources available to you. It&#39;s all
-                      about alignment—clarifying sponsorship objectives, exploring opportunities, and building a roadmap
-                      for success.
+                      Die Strategie basiert nicht auf Trends, sondern auf erprobten Prinzipien. Ob Bitcoin, Gold oder
+                      Beteiligungen: Jede Entscheidung folgt einer klaren Logik.
                     </p>
                     <div class="process_bg">
                     </div>
@@ -624,14 +878,13 @@ a,
                   </div>
                   <div class="process_items is-3">
                     <div class="process_h">
-                      Project Sessions
+                      Begleitung auf Augenhöhe
                     </div>
                     <div class="process_bullets">
                     </div>
                     <p fd-text="wipe" class="process_paragraph-tab">
-                      Whether you&#39;re optimizing existing revenue streams, identifying new monetization mechanisms,
-                      or refining your audience growth strategy, support is available on request to start new projects
-                      with our team.
+                      Das Mentoring schafft Sicherheit und Selbstständigkeit. Es geht darum, die richtigen
+                      Entscheidungen selbst treffen zu können. Mit Überblick und Klarheit.
                     </p>
                     <div class="process_bg">
                     </div>
@@ -640,13 +893,13 @@ a,
                   </div>
                   <div class="process_items is-4">
                     <div class="process_h is-right">
-                      Ongoing Support
+                      Strategisch investieren
                     </div>
                     <div class="process_bullets">
                     </div>
                     <p fd-text="wipe" class="process_paragraph-tab">
-                      As these new projects take shape, we stay connected through regular check-ins to ensure measurable
-                      and meaningful progress is made toward your short and long-term objectives.
+                      Kapital unabhängig und langfristig sicher einsetzen – mit System. Keine Produkte, keine Theorie,
+                      sondern ein mentorgeführtes System.
                     </p>
                     <div class="process_bg">
                     </div>
@@ -655,14 +908,13 @@ a,
                   </div>
                   <div class="process_items is-5">
                     <div class="process_h is-right">
-                      Performance Iteration
+                      Souverän handeln
                     </div>
                     <div class="process_bullets">
                     </div>
                     <p fd-text="wipe" class="process_paragraph-tab">
-                      You&#39;ll have direct access to our leadership team with regular touch points, giving you a say
-                      in how we evolve our approach. Your input drives our improvement, making sure our support delivers
-                      real impact.
+                      Du bekommst eine klare Struktur, persönliche Begleitung und Strategien, die auf dich abgestimmt
+                      sind – nicht auf einen Markttrend.
                     </p>
                     <div class="process_bg">
                     </div>
@@ -672,27 +924,24 @@ a,
                 </div>
                 <div class="process_paragraphs">
                   <p class="process_paragraph is-main">
-                    We start with a conversation to understand your goals, challenges, and vision for growth. Based on
-                    your specific needs, we outline how our team can help drive the business growth you&#39;re looking
-                    for.
+                    Es geht nicht darum, was „man gerade macht“, sondern zu verstehen, wie Geldsysteme funktionieren.
+                    Für Menschen, die mitdenken und vorbauen wollen.
                   </p>
                   <p class="process_paragraph">
-                    You&#39;ll meet your dedicated team and learn about the resources available to you. It&#39;s all
-                    about alignment—clarifying sponsorship objectives, exploring opportunities, and building a roadmap
-                    for success.
+                    Die Strategie basiert nicht auf Trends, sondern auf erprobten Prinzipien. Ob Bitcoin, Gold oder
+                    Beteiligungen: Jede Entscheidung folgt einer klaren Logik.
                   </p>
                   <p class="process_paragraph">
-                    Whether you&#39;re optimizing existing revenue streams, identifying new monetization mechanisms, or
-                    refining your audience growth strategy, our team is available to provide the support you need.
+                    Das Mentoring schafft Sicherheit und Selbstständigkeit. Es geht darum, die richtigen Entscheidungen
+                    selbst treffen zu können. Mit Überblick und Klarheit.
                   </p>
                   <p class="process_paragraph">
-                    As new initiatives take shape, we stay connected through regular check-ins to ensure measurable and
-                    meaningful progress is made toward your short and long-term objectives.
+                    Kapital unabhängig und langfristig sicher einsetzen – mit System. Keine Produkte, keine Theorie,
+                    sondern ein mentorgeführtes System.
                   </p>
                   <p class="process_paragraph">
-                    You&#39;ll have direct access to our leadership team with regular touch points, giving you a say in
-                    how we evolve our approach. Your input drives our improvement, making sure our support delivers real
-                    impact.
+                    Du bekommst eine klare Struktur, persönliche Begleitung und Strategien, die auf dich abgestimmt sind
+                    – nicht auf einen Markttrend.
                   </p>
                 </div>
                 <div class="process_paths">
@@ -769,7 +1018,7 @@ a,
         <div class="marquee_wrap">
           <div class="marquee">
             <div class="marquee-text">
-              increase your revenue
+              Klarheit
             </div>
             <div class="polygon-img w-embed">
               <svg width="100%" height="100%" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -778,7 +1027,7 @@ a,
               </svg>
             </div>
             <div class="marquee-text">
-              Grow your audience
+              Strategie
             </div>
             <div class="polygon-img w-embed">
               <svg width="100%" height="100%" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -787,7 +1036,7 @@ a,
               </svg>
             </div>
             <div class="marquee-text">
-              Reduce your workload
+              Struktur
             </div>
             <div class="polygon-img w-embed">
               <svg width="100%" height="100%" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -798,7 +1047,7 @@ a,
           </div>
           <div class="marquee">
             <div class="marquee-text">
-              increase your revenue
+              Unabhängigkeit
             </div>
             <div class="polygon-img w-embed">
               <svg width="100%" height="100%" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -807,7 +1056,7 @@ a,
               </svg>
             </div>
             <div class="marquee-text">
-              Grow your audience
+              System
             </div>
             <div class="polygon-img w-embed">
               <svg width="100%" height="100%" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -816,7 +1065,7 @@ a,
               </svg>
             </div>
             <div class="marquee-text">
-              Reduce your workload
+              Kontrolle
             </div>
             <div class="polygon-img w-embed">
               <svg width="100%" height="100%" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -832,27 +1081,27 @@ a,
           <div class="container-medium">
             <div class="heading-max-width">
               <h3 fd-text="h2" class="heading-style-h3">
-                Partners
+                Kunden
               </h3>
               <div class="heading-right-align">
                 <h3 fd-text="h2" class="heading-style-h3">
-                  words
+                  Erfahrungen
                 </h3>
               </div>
             </div>
             <div class="clients-content">
               <div class="client-reviews">
                 <div class="text-size-xlarge clients-text">
-                  Hear it from our clients
+                  Das sagen Kunden über mich
                 </div>
                 <div class="btn-group">
                   <div class="partners-small-text">
-                    Ready to Learn More?
+                    Bereit für den nächsten Schritt?
                   </div>
                   <div class="button_wrap">
                     <a href="https://influint.link/InfluintApplication" class="header-btn w-inline-block">
                       <div>
-                        Apply Now
+                        Jetzt bewerben
                       </div>
                     </a>
                     <div class="button_bg">
@@ -879,7 +1128,7 @@ a,
               </div>
               <div class="trusted-by">
                 <div class="text-size-regular hide-mobile-portrait">
-                  Trusted by
+                  Vertrauen von
                 </div>
                 <div class="clients_avatars">
                   <div class="clients_avatar-wrap">
@@ -937,9 +1186,9 @@ a,
               <div class="clients_slide">
                 <div class="slider_text-wrap">
                   <div class="clients_text">
-                    “I&#39;ve been very happy with the service I&#39;ve received and I&#39;ve actually suggested
-                    Influint to a few of my creator friends. They have been able to get me great contract values and the
-                    deal flow; it has been more than I&#39;ve been able to keep up with.”
+                    “Florian Danke!!! Der letzte Zoom Call war einfach Mega wirklich! Ich habe so viel dazu gelernt und
+                    mit meinem neuen Wissen fühle ich mich endlich sicher beim Investieren.”
+                    <br />
                     <br />
                   </div>
                 </div>
@@ -955,7 +1204,7 @@ a,
                   </div>
                   <div class="clients_name">
                     <div class="text-color-yellow">
-                      Zac Builds
+                      Waltraut J.
                     </div>
                     <div class="clients_name-bg">
                     </div>
@@ -1248,20 +1497,20 @@ a,
           <div class="container-xmedium">
             <div class="faqs-content">
               <h3 fd-text="h2" class="heading-style-h3">
-                Questions
+                FAQ
               </h3>
               <div class="faqs-main-content">
                 <div class="faq-subheading">
                   <div fd-text="scale-in" class="large-text text-weight-medium">
-                    Frequently Asked Questions
+                    Häufige Fragen
                   </div>
                   <div fd-text="wipe" class="text-size-xregular">
-                    Still can’t find the answer to your question? Submit your application to learn more.
+                    Antworten auf die wichtigsten Fragen zum Mentoring.
                   </div>
                   <div class="button_wrap">
                     <a href="https://influint.link/InfluintApplication" class="header-btn w-inline-block">
                       <div>
-                        Apply Now
+                        Jetzt bewerben
                       </div>
                     </a>
                     <div class="button_bg">
@@ -1289,7 +1538,7 @@ a,
                   <div class="modular-faq-item">
                     <div class="modular-faq-trigger">
                       <div fd-text="h2" class="text-size-medium-white">
-                        How does Influint work?
+                        Was kostet das Mentoring?
                       </div>
                       <div class="footer_divider is-2">
                       </div>
@@ -1297,10 +1546,8 @@ a,
                     <div class="modular-faq-detail-wrap">
                       <div class="modular-faq-content">
                         <div class="text-size-regular">
-                          Our goal is to become an extension of your team. We work closely with our clients, offering a
-                          range of services including brand partnership management, contract advisory, growth strategy,
-                          and brand development, amongst others. Our goal is to help creators monetize their passions
-                          effectively. Our services are tailored to meet the unique needs of each client.
+                          Das Investment hängt von deiner individuellen Ausgangssituation und deinen Zielen ab. Wir
+                          klären dies transparent im kostenfreien Erstgespräch.
                         </div>
                         <div class="spacer-40">
                         </div>
@@ -1310,7 +1557,7 @@ a,
                   <div class="modular-faq-item">
                     <div class="modular-faq-trigger">
                       <div fd-text="h2" class="text-size-medium-white">
-                        What kinds of creators do you typically represent?
+                        Brauche ich Vorkenntnisse in Krypto?
                       </div>
                       <div class="footer_divider is-2">
                       </div>
@@ -1318,10 +1565,8 @@ a,
                     <div class="modular-faq-detail-wrap">
                       <div class="modular-faq-content">
                         <div class="text-size-regular">
-                          We work with creators across various niches, including lifestyle, tech, DIY, family, and more.
-                          We specialize in working with creators who are ready to professionalize their business, secure
-                          high-value partnerships, and expand their opportunities beyond AdSense. Our ideal client knows
-                          that big things are built together, and understands the value an experienced team can bring.
+                          Nein. Unser System ist so aufgebaut, dass du bei Null starten kannst. Wir begleiten dich
+                          Schritt für Schritt bis zur sicheren Umsetzung.
                         </div>
                         <div class="spacer-40">
                         </div>
@@ -1331,7 +1576,7 @@ a,
                   <div class="modular-faq-item">
                     <div class="modular-faq-trigger">
                       <div fd-text="h2" class="text-size-medium-white">
-                        What makes Influint different?
+                        Wie sicher ist das Ganze?
                       </div>
                       <div class="footer_divider is-2">
                       </div>
@@ -1339,10 +1584,8 @@ a,
                     <div class="modular-faq-detail-wrap">
                       <div class="modular-faq-content">
                         <div class="text-size-regular">
-                          We take a business-first approach to our creators and their success. While many similar
-                          companies focus solely on sponsorship management, our aim is to help creators build
-                          sustainable businesses—whether that&#39;s through brand deals, audience growth strategy,
-                          building their support team, or diversifying their revenue streams.
+                          Wir setzen auf Sicherheit und Unabhängigkeit. Kein "schnelles Geld", sondern fundierte
+                          Strategien, die deine Assets schützen und langfristig mehren.
                         </div>
                         <div class="spacer-40">
                         </div>
@@ -1352,7 +1595,7 @@ a,
                   <div class="modular-faq-item">
                     <div class="modular-faq-trigger">
                       <div fd-text="h2" class="text-size-medium-white">
-                        What is Influint Ventures?
+                        Wie viel Zeit muss ich einplanen?
                       </div>
                       <div class="footer_divider is-2">
                       </div>
@@ -1360,9 +1603,8 @@ a,
                     <div class="modular-faq-detail-wrap">
                       <div class="modular-faq-content">
                         <div class="text-size-regular">
-                          Influint Ventures focuses on equity partnerships with select creators. We collaborate to
-                          launch innovative commerce initiatives that align with your brand. Our expertise ensures that
-                          your ideas are brought to life successfully.
+                          Das Mentoring ist so konzipiert, dass es auch für vielbeschäftigte Unternehmer nebenbei
+                          umsetzbar ist. Die Prozesse sind effizient und klar strukturiert.
                         </div>
                         <div class="spacer-40">
                         </div>
@@ -1372,7 +1614,7 @@ a,
                   <div class="modular-faq-item">
                     <div class="modular-faq-trigger">
                       <div fd-text="h2" class="text-size-medium-white">
-                        How can I get started?
+                        Wann sehe ich erste Ergebnisse?
                       </div>
                       <div class="footer_divider is-2">
                       </div>
@@ -1380,10 +1622,8 @@ a,
                     <div class="modular-faq-detail-wrap">
                       <div class="modular-faq-content">
                         <div class="text-size-regular">
-                          If you’re ready to take your career as a creator to the next level, click &#34;Apply Now&#34;.
-                          Answer the short survey that follows, and you’ll receive an invitation to join us if we think
-                          you’re a good fit for our services. Due to the volume of requests, we are unable to respond to
-                          all applicants. If you do not hear from us, don’t hesitate to apply again in the future!
+                          Mit der Umsetzung beginnst du sofort. Die ersten strategischen Weichenstellungen erfolgen in
+                          den ersten Wochen, langfristige Ergebnisse bauen sich kontinuierlich auf.
                         </div>
                         <div class="spacer-40">
                         </div>
@@ -1404,7 +1644,7 @@ a,
             <div class="cta_wrap">
               <div class="cta-content">
                 <div fd-text="scale-in" class="text-size-xlarge cta-text">
-                  Get the roadmap + support you need to grow
+                  Triff mein Experten-Team
                 </div>
                 <div class="cta-small-content">
                   <div class="creaters-images-list">
@@ -1422,12 +1662,12 @@ a,
                       loading="lazy" alt="creaters" class="creaters-img left-margin" />
                   </div>
                   <div class="text-size-regular-white">
-                    150+ creators trust influint
+                    5000+ betreute Anleger
                   </div>
                   <div class="button_wrap">
                     <a href="https://influint.link/InfluintApplication" class="header-btn w-inline-block">
                       <div>
-                        Apply Now
+                        Kennenlernen
                       </div>
                     </a>
                     <div class="button_bg">
@@ -1452,112 +1692,103 @@ a,
                   </div>
                 </div>
               </div>
-              <div class="cta-img-content">
-                <div class="cta-image _1st-img">
-                  <img
-                    src="https://cdn.prod.website-files.com/67bf3cf43a707934567c8737/68e40e8b7c8af6cc176334b0_natalie_profile_transparent%20(1).png"
-                    loading="eager" alt="" class="cta_img" />
-                  <div class="cta-info">
-                    <div class="text-weight-medium">
-                    </div>
-                    <div>
-                      Natalie Robinson
-                    </div>
-                    <div class="text-weight-light">
-                      Sr. Talent Manager
-                    </div>
-                  </div>
-                </div>
-                <div class="cta-image _2nd-img">
-                  <img
-                    src="https://cdn.prod.website-files.com/67bf3cf43a707934567c8737/67c5ddd401ed44ac44d2704d_image%208.webp"
-                    loading="eager" alt="" class="cta_img" />
-                  <div class="cta-info">
-                    <div class="text-weight-medium">
-                      Ben Mercado
-                    </div>
-                    <div>
-                      Manager Assistant Lead
-                    </div>
-                  </div>
-                </div>
-                <div class="cta-image is-3">
-                  <img
-                    src="https://cdn.prod.website-files.com/67bf3cf43a707934567c8737/67c36d486c45159368de524c_image%209.webp"
-                    loading="eager" alt="" class="cta_img" />
-                  <div class="cta-info">
-                    <div class="text-weight-medium">
-                      Brianna Squire
-                    </div>
-                    <div>
-                      Sr. Talent Manager
-                    </div>
-                    <div class="text-weight-light">
-                      Head of Activations
-                    </div>
-                  </div>
-                </div>
-                <div class="cta-image is-4">
-                  <img
-                    src="https://cdn.prod.website-files.com/67bf3cf43a707934567c8737/67c36d487b87ee22dca87460_image%2010.webp"
-                    loading="eager" alt="" class="cta_img" />
-                  <div class="cta-info">
-                    <div class="text-weight-medium">
-                      David Ciampittiello
-                    </div>
-                    <div>
-                      General Manager
-                    </div>
-                  </div>
-                </div>
-                <div class="cta-image is-5">
-                  <img
-                    src="https://cdn.prod.website-files.com/67bf3cf43a707934567c8737/67c36d481504d766d635c2cb_image%2011.webp"
-                    loading="eager" alt="" class="cta_img" />
-                  <div class="cta-info">
-                    <div class="text-weight-medium">
-                      Savannah McVay
-                    </div>
-                    <div>
-                      Director of Creator Relations
+              <section class="team-section">
+                <h3 class="section-title">Das Experten-Team an deiner Seite</h3>
+                <div class="slider-wrapper">
+                  <button class="nav-btn prev-btn" id="slideLeft" onclick="moveSlide(-1)"><i
+                      class="fa-solid fa-chevron-left"></i></button>
+                  <div class="team-slider-container" id="team-slider">
+                    <div class="team-slider-track" id="track">
+                      <div class="team-card"><img src="mitarbeiter/anna.webp" alt="Anja" class="team-img" loading="lazy"
+                          decoding="async">
+                        <h4 class="team-name">Anja Dautzenberg</h4><span class="team-role">Organisation &
+                          Backoffice</span>
+                        <p class="team-desc">Anja Dautzenberg ist die zentrale organisatorische Schnittstelle unseres
+                          Unternehmens und die rechte Hand der Geschäftsführung. Sie sorgt für Struktur, Ordnung und
+                          reibungslose Abläufe.<span class="desc-spacer">👉 Ihr Fokus: Stabilität und
+                            Verlässlichkeit.</span></p>
+                      </div>
+                      <div class="team-card"><img src="mitarbeiter/jona.webp" alt="Jonathan" class="team-img"
+                          loading="lazy" decoding="async">
+                        <h4 class="team-name">Jonathan Rosenfeld</h4><span class="team-role">Head of Education</span>
+                        <p class="team-desc">Jonathan Rosenfeld ist Head of Education und verantwortlich für die
+                          inhaltliche Exzellenz. Er entwickelt die Lerninhalte und analysiert die Märkte.<span
+                            class="desc-spacer">👉 Sein Fokus: Qualität auf höchstem Niveau.</span></p>
+                      </div>
+                      <div class="team-card"><img src="mitarbeiter/markus.webp" alt="Markus" class="team-img"
+                          loading="lazy" decoding="async">
+                        <h4 class="team-name">Markus Hoffmann</h4><span class="team-role">Ultimate Mastermind</span>
+                        <p class="team-desc">Markus Hoffmann betreut unsere Platinum Kunden. Als CCFE-zertifizierter
+                          Trainer verbindet er Fachwissen mit strategischem Denken.<span class="desc-spacer">👉 Sein
+                            Fokus: Exzellenz und Kundennähe.</span></p>
+                      </div>
+                      <div class="team-card"><img src="mitarbeiter/alex.webp" alt="Alexander" class="team-img"
+                          loading="lazy" decoding="async">
+                        <h4 class="team-name">Alexander von Berg</h4><span class="team-role">Blockchain-Trainer</span>
+                        <p class="team-desc">Alexander begleitet Teilnehmer Schritt für Schritt. Er vermittelt
+                          praxisnahes Wissen zu Wallets und Sicherheit.<span class="desc-spacer">👉 Sein Fokus:
+                            Verständnis und Sicherheit.</span></p>
+                      </div>
+                      <div class="team-card"><img src="mitarbeiter/maxi.webp" alt="Maximilian" class="team-img"
+                          loading="lazy" decoding="async">
+                        <h4 class="team-name">Maximilian Steger</h4><span class="team-role">Blockchain-Trainer</span>
+                        <p class="team-desc">Maximilian bringt Leidenschaft und Disziplin in die Arbeit ein. Er
+                          begleitet Teilnehmer ruhig und verständlich bei der Umsetzung.<span class="desc-spacer">👉
+                            Sein Fokus: Moderne Finanzbildung.</span></p>
+                      </div>
+                      <div class="team-card"><img src="mitarbeiter/leonie.webp" alt="Leonie" class="team-img"
+                          loading="lazy" decoding="async">
+                        <h4 class="team-name">Leonie Falkner</h4><span class="team-role">Marketing</span>
+                        <p class="team-desc">Leonie ist verantwortlich für die Außenwirkung. Sie sorgt für klare
+                          Positionierung und übersetzt komplexe Themen verständlich.<span class="desc-spacer">👉 Ihr
+                            Ziel: Menschen begeistern.</span></p>
+                      </div>
+                      <div class="team-card"><img src="mitarbeiter/kevin.webp" alt="Kevin" class="team-img"
+                          loading="lazy" decoding="async">
+                        <h4 class="team-name">Kevin Feist</h4><span class="team-role">Blockchain-Experte</span>
+                        <p class="team-desc">Kevin ist ausgewiesener Experte und CCFE-zertifiziert. Er betreut
+                          High-Value-Kunden und entwickelt individuelle Lösungen.<span class="desc-spacer">👉 Sein
+                            Fokus: Unternehmerische Klarheit.</span></p>
+                      </div>
+                      <div class="team-card"><img src="mitarbeiter/florian.webp" alt="Florian" class="team-img"
+                          loading="lazy" decoding="async">
+                        <h4 class="team-name">Florian Merzenich</h4><span class="team-role">CEO</span>
+                        <p class="team-desc">Florian Merzenich ist Gründer und Geschäftsführer. Mit starkem Mindset und
+                          Erfahrung nimmt er Menschen an die Hand.<span class="desc-spacer" style="color:#7BDBD4;">👉
+                            Sein Ziel: Finanzielle Selbstbestimmung.</span></p>
+                      </div>
                     </div>
                   </div>
+                  <button class="nav-btn next-btn" id="slideRight" onclick="moveSlide(1)"><i
+                      class="fa-solid fa-chevron-right"></i></button>
                 </div>
-                <div class="cta-image is-6">
-                  <img
-                    src="https://cdn.prod.website-files.com/67bf3cf43a707934567c8737/67c36d496c45159368de52ae_image%2012.webp"
-                    loading="eager" alt="" class="cta_img" />
-                  <div class="cta-info">
-                    <div class="text-weight-medium">
-                      Regina Martiarena
-                    </div>
-                    <div>
-                      Sr. Talent Manager
-                    </div>
-                    <div class="text-weight-light">
-                      Head of Creator Success
-                    </div>
-                  </div>
-                </div>
-                <div class="cta-image">
-                  <img
-                    src="https://cdn.prod.website-files.com/67bf3cf43a707934567c8737/67c36d487145f148200943e4_image%2013.webp"
-                    loading="eager" alt="" class="cta_img" />
-                  <div class="cta-info">
-                    <div class="text-weight-medium">
-                      Niamh Higgins
-                    </div>
-                    <div>
-                      Sr. Talent Manager
-                    </div>
-                    <div class="text-weight-light">
-                      Head of Professional Development
-                    </div>
-                  </div>
-                </div>
-                <div class="cta_glow">
-                </div>
-              </div>
+                <script>
+                  let currentIndex = 0;
+
+                  function moveSlide(direction) {
+                    const track = document.getElementById('track');
+                    const cards = document.querySelectorAll('.team-card');
+                    const cardWidth = cards[0].offsetWidth + 20; // card width + gap
+                    const visibleCards = Math.floor(document.getElementById('team-slider').offsetWidth / cardWidth);
+                    const maxIndex = cards.length - visibleCards;
+
+                    currentIndex += direction;
+
+                    if (currentIndex < 0) currentIndex = 0;
+                    if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+                    const translateX = -(currentIndex * cardWidth);
+                    track.style.transform = `translateX(${translateX}px)`;
+                  }
+
+                  // Optional: Recalculate on resize
+                  window.addEventListener('resize', () => {
+                    // Reset to 0 on resize to avoid alignment issues
+                    currentIndex = 0;
+                    document.getElementById('track').style.transform = `translateX(0px)`;
+                  });
+                </script>
+              </section>
             </div>
           </div>
         </div>
@@ -1577,26 +1808,25 @@ a,
           <div class="footer-content">
             <div class="footer-main-content">
               <div class="footer-link">
-                <a href="#section-clients" class="w-inline-block"> <img loading="lazy"
-                    src="https://cdn.prod.website-files.com/67bf3cf43a707934567c8737/67bf3cf43a707934567c87a7_Newsletter.svg"
-                    alt="Logo" class="footer-logo" />
+                <a href="#section-clients" class="w-inline-block"> <img loading="lazy" src="logo_weiß.png" alt="Logo"
+                    class="footer-logo" style="height: 85px; width: auto; object-fit: contain;" />
                 </a>
               </div>
               <div class="footer-link-list">
                 <div class="footer-list">
                   <a id="about-us" href="#section-about" class="footer_links w-inline-block">
                     <div>
-                      About
+                      Über Uns
                     </div>
                   </a>
                   <a id="our-process" href="#section-process" class="footer_links w-inline-block">
                     <div>
-                      Our Process
+                      Prozess
                     </div>
                   </a>
                   <a id="our-clients" href="#section-clients" class="footer_links w-inline-block">
                     <div>
-                      Our Clients
+                      Erfolge
                     </div>
                   </a>
                   <a id="faqs" href="#section-faq" class="footer_links w-inline-block">
@@ -1753,6 +1983,24 @@ a,
       loadinfluint(src);
     })
   </script>
+  <div class="proven-wrapper">
+    <div class="proven-logo">Proven<span>Expert</span></div>
+    <div class="proven-stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+    </div>
+    <div class="proven-rating">SEHR GUT <span style="font-weight:400; color:#666;">(5.00)</span></div>
+    <div class="proven-date" id="provenDate">50 Bewertungen</div>
+    <script>
+      const dateEl = document.getElementById('provenDate');
+      const now = new Date();
+      const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+      dateEl.innerHTML = `50 Bewertungen • Stand: ${now.toLocaleDateString('de-DE', options)}`;
+    </script>
+  </div>
 </body>
 
 </html>
