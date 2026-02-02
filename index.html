@@ -312,26 +312,30 @@ a,
         }
 
         .marquee-logo {
-          height: 30px;
+          height: 60px;
+          /* Größer */
           width: auto;
-          margin: 0 30px;
+          margin: 0 40px;
+          /* Mehr Abstand */
           object-fit: contain;
-          opacity: 0.7;
-          filter: grayscale(100%);
-          transition: all 0.3s ease;
+          opacity: 1;
+          /* Volle Deckkraft */
+          filter: none;
+          /* Farbig */
+          transition: transform 0.3s ease;
         }
 
         .marquee-logo:hover {
-          opacity: 1;
-          filter: grayscale(0%);
+          transform: scale(1.1);
+          /* Leichter Zoom bei Hover */
         }
 
         .marquee-logo.invert {
-          filter: invert(1) grayscale(100%);
+          filter: invert(1);
         }
 
         .marquee-logo.invert:hover {
-          filter: invert(1) grayscale(0%);
+          filter: invert(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
         }
 
         .marquee-text {
@@ -472,14 +476,15 @@ a,
         }
 
         /* ProvenExpert Banner */
+        /* ProvenExpert Banner */
         .proven-wrapper {
           position: fixed;
           bottom: 20px;
           right: 20px;
           background: white;
-          padding: 10px 15px;
-          /* Reduziertes Padding */
-          border-radius: 8px;
+          padding: 8px 12px;
+          /* Noch schmaleres Padding */
+          border-radius: 6px;
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
           display: flex;
           flex-direction: column;
@@ -487,13 +492,13 @@ a,
           z-index: 9999;
           font-family: 'Inter', sans-serif;
           color: #333;
-          /* min-width entfernt für schmaleren Look */
         }
 
         .proven-logo {
           font-weight: 700;
-          font-size: 18px;
-          margin-bottom: 5px;
+          font-size: 16px;
+          /* Kleiner für schmaleren Look */
+          margin-bottom: 3px;
           color: #000;
         }
 
@@ -807,21 +812,23 @@ a,
                 Bekannt aus:</p>
               <div class="marquee-content">
                 <!-- .webp ersetzt & lazy -->
-                <img src="focus.webp" class="marquee-logo" alt="Focus" loading="lazy" decoding="async">
-                <img src="wirtschaftswoche.webp" class="marquee-logo invert" alt="WirtschaftsWoche" loading="lazy"
+                <img src="logos/focus.webp" class="marquee-logo" alt="Focus" loading="lazy" decoding="async">
+                <img src="logos/wirtschaftswoche.webp" class="marquee-logo invert" alt="WirtschaftsWoche" loading="lazy"
                   decoding="async">
-                <img src="ntv.webp" class="marquee-logo" style="border-radius: 4px;" alt="n-tv" loading="lazy"
+                <img src="logos/ntv.webp" class="marquee-logo" style="border-radius: 4px;" alt="n-tv" loading="lazy"
                   decoding="async">
-                <img src="rtl.webp" class="marquee-logo" alt="RTL" loading="lazy" decoding="async">
-                <img src="london.webp" class="marquee-logo" alt="London Daily News" loading="lazy" decoding="async">
+                <img src="logos/rtl.webp" class="marquee-logo" alt="RTL" loading="lazy" decoding="async">
+                <img src="logos/london.webp" class="marquee-logo" alt="London Daily News" loading="lazy"
+                  decoding="async">
                 <span class="marquee-text">Business Magazin</span>
-                <img src="focus.webp" class="marquee-logo" alt="Focus" loading="lazy" decoding="async">
-                <img src="wirtschaftswoche.webp" class="marquee-logo invert" alt="WirtschaftsWoche" loading="lazy"
+                <img src="logos/focus.webp" class="marquee-logo" alt="Focus" loading="lazy" decoding="async">
+                <img src="logos/wirtschaftswoche.webp" class="marquee-logo invert" alt="WirtschaftsWoche" loading="lazy"
                   decoding="async">
-                <img src="ntv.webp" class="marquee-logo" style="border-radius: 4px;" alt="n-tv" loading="lazy"
+                <img src="logos/ntv.webp" class="marquee-logo" style="border-radius: 4px;" alt="n-tv" loading="lazy"
                   decoding="async">
-                <img src="rtl.webp" class="marquee-logo" alt="RTL" loading="lazy" decoding="async">
-                <img src="london.webp" class="marquee-logo" alt="London Daily News" loading="lazy" decoding="async">
+                <img src="logos/rtl.webp" class="marquee-logo" alt="RTL" loading="lazy" decoding="async">
+                <img src="logos/london.webp" class="marquee-logo" alt="London Daily News" loading="lazy"
+                  decoding="async">
                 <span class="marquee-text">Business Magazin</span>
               </div>
             </div>
